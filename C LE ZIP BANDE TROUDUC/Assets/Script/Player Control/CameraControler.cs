@@ -18,6 +18,7 @@ public class CameraControler : MonoBehaviour
         {
             mouseDelta = Vector2.zero;
         }
+        Debug.Log(mouseDelta);
     }
 
     private void Update()
