@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4227347833722336442}
   - component: {fileID: 1196562744166456937}
   - component: {fileID: 807830480882885874}
+  - component: {fileID: 244237573159696160}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -92,6 +93,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2266326898134170616}
   m_Enabled: 1
+--- !u!114 &244237573159696160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2266326898134170616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb610de7929f904e8e32f0f50a9fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivity: 40
+  playerBody: {fileID: 3176773404618586638}
 --- !u!1 &2694432543852888565
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,9 +182,9 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5172004823796323113}
-        m_TargetAssemblyTypeName: PlayerView, Assembly-CSharp
-        m_MethodName: OnLook
+      - m_Target: {fileID: 244237573159696160}
+        m_TargetAssemblyTypeName: CameraControler, Assembly-CSharp
+        m_MethodName: OnMouseLookPerformed
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -229,7 +244,7 @@ MonoBehaviour:
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1196562744166456937}
 --- !u!1 &2863300917429252922
 GameObject:
   m_ObjectHideFlags: 0
